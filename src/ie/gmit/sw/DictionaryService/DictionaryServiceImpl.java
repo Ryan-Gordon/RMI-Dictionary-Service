@@ -32,5 +32,16 @@ public class DictionaryServiceImpl extends UnicastRemoteObject implements Dictio
 			System.out.println("Word "+next[0].toUpperCase()+" \t Definition: "+next[2]);
 		}
 	}//fillDictionary
-	
+	//Implemented RMI method
+	public String lookup(String wordToSearch) throws RemoteException {
+		//Check for the word in our map
+		if(dict.containsKey(wordToSearch)) {
+			return(dict.get(wordToSearch));
+		}
+		else {
+			System.out.println(wordToSearch);
+			return ("String not found");
+		}
+		
+	}//lookup
 }
