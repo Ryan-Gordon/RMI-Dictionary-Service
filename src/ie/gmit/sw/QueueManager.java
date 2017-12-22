@@ -10,7 +10,7 @@ import ie.gmit.sw.DictionaryService.DictionaryService;
 
 public class QueueManager implements Runnable {
 	private Queue<String> inQueue;
-	
+	private Queue<String> outQueue;
 	private String response;
 	private String jobNumber;
 
@@ -29,7 +29,8 @@ public class QueueManager implements Runnable {
 				System.out.println("Attempting to send job to remote object");
 				this.response = ds.lookup(inQueue.poll().toUpperCase());
 				
-				
+				//Add our response to the out queue.
+				outQueue.add(response);
 				
 			} else {
 				System.out.println("Queue is empty; nothing to process");
@@ -38,7 +39,15 @@ public class QueueManager implements Runnable {
 	
 	public String getResponse() throws InterruptedException {
 		//Check if there is anything on the queue.
-		
+		if(outQueue.peek() != null)
+			return outQueue.poll();
+		else {
+			//Send thread to sleep for a little bit
+			Thread.sleep(2000);
+			//Try to get a response again.
+			return getResponse();
+		}
+			
 	}
 	public String getJobNumber() {
 		return jobNumber;

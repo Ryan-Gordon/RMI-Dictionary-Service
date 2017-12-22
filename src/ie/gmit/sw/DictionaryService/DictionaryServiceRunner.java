@@ -4,6 +4,11 @@ import java.rmi.Naming;
 import java.rmi.registry.LocateRegistry;
 
 public class DictionaryServiceRunner {
+	/**
+	 * Running this class will start the dictionaryService and load the dictionary defintions
+	 * @param args
+	 * @throws Exception
+	 */
 	public static void main(String[] args) throws Exception
 	{
 		
