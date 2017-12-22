@@ -29,8 +29,10 @@ public class DictionaryServiceImpl extends UnicastRemoteObject implements Dictio
 		
 		while ((next = reader.readNext()) != null) { //Loop through each line in the dictionary file
 			dict.put(next[0].toUpperCase(), next[2].toUpperCase());
-			System.out.println("Word "+next[0].toUpperCase()+" \t Definition: "+next[2]);
+			//System.out.println("Word "+next[0].toUpperCase()+" \t Definition: "+next[2]);
 		}
+		
+		System.out.println("Dictionary filled. "+dict.size()+" words defined in dictionary.");
 	}//fillDictionary
 	//Implemented RMI method
 	public String lookup(String wordToSearch) throws RemoteException {

@@ -19,11 +19,4 @@ public interface DictionaryService extends Remote{
 	 */
 	public String lookup(String wordToSearch) throws RemoteException;
 	
-	/**
-	 * Used to fill the dictionary with definitions.
-	 * @throws RemoteException
-	 * @throws IOException
-	 */
-	public void fillDictionary() throws RemoteException, IOException;
-	
 }
