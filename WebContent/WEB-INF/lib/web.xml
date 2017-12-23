@@ -11,6 +11,13 @@
     <param-name>SOME_GLOBAL_OR_ENVIRONMENTAL_VARIABLE</param-name>
     <param-value>Some Value</param-value>
   </context-param>
+  
+  <context-param>
+    <param-name>RMI_URL</param-name>
+    <param-value>rmi://127.0.0.1:1099/dictionaryService</param-value>
+  </context-param>
+  
+  
 
   <!-- A servlet class must be bound to a name -->
   <servlet>
@@ -26,14 +33,4 @@
   </servlet-mapping>
   
   
-  <servlet>
-    <servlet-name>service-poll-handler</servlet-name>
-    <servlet-class>ie.gmit.sw.ServicePollHandler</servlet-class>
-    <load-on-startup>0</load-on-startup>
-  </servlet>
-  
-  <servlet-mapping>
-    <servlet-name>service-poll-handler</servlet-name>
-    <url-pattern>/poll</url-pattern>
-  </servlet-mapping>
 </web-app>

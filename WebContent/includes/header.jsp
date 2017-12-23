@@ -4,6 +4,8 @@
 		<link rel="stylesheet" href="includes/basic.css">
 			<!-- load MUI -->
     <link href="//cdn.muicss.com/mui-0.9.35/css/mui.min.css" rel="stylesheet" type="text/css" />
+    <link href=" http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css" />
+   
     <script src="//cdn.muicss.com/mui-0.9.35/js/mui.min.js"></script>
   </head>
   <body>
@@ -16,7 +18,7 @@
             <td align="mui--text-right">
               <ul class="mui-list--inline mui--text-body2">
                 
-                <li><a href="http://github.com/ryan-gordon/rmi-dictionary-service">Github</a></li>
+                <li><a href="http://github.com/ryan-gordon/rmi-dictionary-service"><i class="icon ion-social-github"></i>Github</a></li>
               </ul>
             </td>
           </tr>
