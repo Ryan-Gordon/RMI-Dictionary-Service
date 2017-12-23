@@ -3,7 +3,7 @@ package ie.gmit.sw.DictionaryService;
 import java.rmi.Naming;
 import java.rmi.registry.LocateRegistry;
 
-public class DictionaryServiceRunner {
+public class ServiceSetup {
 	/**
 	 * Running this class will start the dictionaryService and load the dictionary defintions
 	 * @param args
